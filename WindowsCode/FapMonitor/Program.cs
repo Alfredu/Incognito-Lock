@@ -38,7 +38,7 @@ namespace FapMonitor
                 foreach (Process prs in proc)
                 {
                     if (!incognito)
-                    {
+                    {   
                         incognito = (prs.ProcessName == "chrome" && WmiTest(prs.Id));
                     }
                 }
@@ -65,7 +65,7 @@ namespace FapMonitor
         {
             using (SerialPort serialPort1 = new SerialPort())
             {
-                serialPort1.PortName = "COM4"; //set the port name you see in arduino IDE
+                serialPort1.PortName = "COM5"; //set the port name you see in arduino IDE
                 serialPort1.BaudRate = 9600;   //set the Baud you see in arduino IDE
 
                 serialPort1.Open();
